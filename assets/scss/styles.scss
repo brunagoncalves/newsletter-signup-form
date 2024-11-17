@@ -36,6 +36,8 @@ body {
   }
 
   .content-newsletter {
+    max-width: 23.4375rem;
+    margin: 0 auto;
     padding: 2.5rem 1.5rem;
 
     .title-news {
@@ -56,6 +58,7 @@ body {
       flex-direction: column;
       gap: 0.625rem;
       padding-bottom: 2.5rem;
+      padding-bottom: .625rem;
     }
 
     .form-subscribe {
@@ -63,9 +66,19 @@ body {
       display: flex;
       flex-direction: column;
 
+      p {
+        font-size: .75rem;
+        font-weight: 700;
+        padding-bottom: .5rem;
+      }
+
       input {
+        font-size: 1rem;
+        line-height: 150%;
         padding: 1rem 1.5rem;
+        border: .0625rem solid var(--grey);
         border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
       }
 
       .send-subscribe {
@@ -78,6 +91,7 @@ body {
         padding: 1.125rem;
         border-radius: 0.5rem;
         border: none;
+        cursor: pointer;
       }
     }
   }
