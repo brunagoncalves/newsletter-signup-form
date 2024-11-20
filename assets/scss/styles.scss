@@ -18,6 +18,12 @@
   display: none;
 }
 
+.text-1-bold {
+  font-family: var(--font-primary);
+  font-size: clamp(2.5rem, 2.148rem + 1.5vw, 3.5rem);
+  color: var(--dark-slate-grey);
+}
+
 body {
   font-family: var(--font-primary);
   font-weight: 400;
@@ -25,73 +31,37 @@ body {
   color: var(--dark-slate-grey);
 }
 
-.newsletter {
-  display: flex;
-  flex-direction: column;
-
-  .img-newsletter {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
+.section-newsletter {
   .content-newsletter {
-    max-width: 23.4375rem;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem;
-
-    .title-news {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--dark-slate-grey);
-    }
-
-    .summary-news {
-      font-size: 1rem;
-      line-height: 150%;
-      color: var(--dark-slate-grey);
-      padding: 1.5rem 0 1.5rem 0;
-    }
-
-    .about-newsletter {
-      display: flex;
-      flex-direction: column;
-      gap: 0.625rem;
-      padding-bottom: 2.5rem;
-      padding-bottom: .625rem;
-    }
-
-    .form-subscribe {
+    .img-newsletter {
+      display: block;
       width: 100%;
+      height: auto;
+    }
+
+    .text-newsletter,
+    .form {
       display: flex;
       flex-direction: column;
+      gap: 1.5rem;
+    }
 
-      p {
-        font-size: .75rem;
-        font-weight: 700;
-        padding-bottom: .5rem;
-      }
+    .text-newsletter {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .form {
+      padding: 0 1.5rem 2.5rem 1.5rem;
+      width: 100%;
 
       input {
-        font-size: 1rem;
-        line-height: 150%;
         padding: 1rem 1.5rem;
-        border: .0625rem solid var(--grey);
         border-radius: 0.5rem;
-        margin-bottom: 1.5rem;
       }
 
-      .send-subscribe {
-        background-color: var(--dark-slate-grey);
-        color: var(--white);
-        font-family: var(--font-primary);
-        font-size: 1rem;
-        line-height: 150%;
-        font-weight: 700;
-        padding: 1.125rem;
+      button {
+        padding: 1rem 2.875rem;
         border-radius: 0.5rem;
-        border: none;
-        cursor: pointer;
       }
     }
   }

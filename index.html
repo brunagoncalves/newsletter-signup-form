@@ -16,42 +16,47 @@
   </head>
   <body>
     <main>
-      <section class="newsletter">
-        <img class="img-newsletter" src="assets/images/illustration-sign-up-mobile.svg" alt="Illustration">
+      <section class="section-newsletter">
         <div class="content-newsletter">
-          <h1 class="title-news">Stay updated! </h1>
-          <p class="summary-news">Join 60,000+ product managers receiving monthly updates on:</p>  
-          <div class="about-newsletter">
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+          <picture>
+            <source srcset="assets/images/illustration-sign-up-desktop.svg" media="min-width: 928px">
+            <img class="img-newsletter" src="assets/images/illustration-sign-up-mobile.svg" alt="Illustration">
+          </picture>
+          <div class="text-newsletter">
+            <h1 class="text-1-bold">Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <div class="list">
+              <p><span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                 <g fill="none">
                     <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/>
                     <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/>
                 </g>
             </svg>
-              Product discovery and building what matters</p>
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            </span>Product discovery and building what matters</p>
+                <p><span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                  <g fill="none">
+                      <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/>
+                      <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/>
+                  </g>
+              </svg>
+            </span>Measuring to ensure updates are a success</p>
+              <p><span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
                 <g fill="none">
                     <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/>
                     <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/>
                 </g>
-            </svg>
-              Measuring to ensure updates are a success </p>
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                <g fill="none">
-                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/>
-                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/>
-                </g>
-            </svg>
-              And much more! </p>
+            </svg></span>And much more!</p>
+            </div>
           </div>
-          <form class="form-subscribe">
-            <p>Email address </p>
-            <input type="text" placeholder="email@company.com">
-            <button class="send-subscribe" type="submit">Subscribe to monthly newsletter</button>
+
+          <form class="form">
+            <p>Email address</p>
+            <input type="email" placeholder="email@company.com">
+            <button type="submit">Subscribe to monthly newsletter</button>
           </form>
+
         </div>
       </section>
     </main>
