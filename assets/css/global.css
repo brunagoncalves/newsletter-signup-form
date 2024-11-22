@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  background-color: var(--charcoal-grey);
+}
+
 .attribution {
   font-size: 0.625rem;
   text-align: center;
@@ -21,41 +26,112 @@
 .text-1-bold {
   font-family: var(--font-primary);
   font-size: clamp(2.5rem, 2.148rem + 1.5vw, 3.5rem);
+  font-weight: 700;
   color: var(--dark-slate-grey);
 }
 
-body {
+.text-2-bold {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.text-3-regular {
   font-family: var(--font-primary);
   font-weight: 400;
   font-style: normal;
+  line-height: 150%;
   color: var(--dark-slate-grey);
 }
 
+.section-newsletter {
+  background-color: var(--white);
+}
+.section-newsletter .content-newsletter {
+  display: grid;
+}
 .section-newsletter .content-newsletter .img-newsletter {
   display: block;
   width: 100%;
   height: auto;
 }
-.section-newsletter .content-newsletter .text-newsletter,
-.section-newsletter .content-newsletter .form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
 .section-newsletter .content-newsletter .text-newsletter {
   padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-.section-newsletter .content-newsletter .form {
-  padding: 0 1.5rem 2.5rem 1.5rem;
-  width: 100%;
+.section-newsletter .content-newsletter .text-newsletter .text,
+.section-newsletter .content-newsletter .text-newsletter .form {
+  display: flex;
+  flex-direction: column;
 }
-.section-newsletter .content-newsletter .form input {
+.section-newsletter .content-newsletter .text-newsletter .text {
+  gap: 1.5rem;
+}
+.section-newsletter .content-newsletter .text-newsletter .text .list p {
+  display: flex;
+  margin-bottom: 0.625rem;
+  gap: 1rem;
+}
+.section-newsletter .content-newsletter .text-newsletter .form p {
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dark-slate-grey);
+  margin-bottom: 8px;
+}
+.section-newsletter .content-newsletter .text-newsletter .form input {
+  margin-bottom: 1.5rem;
   padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: var(--dark-slate-grey);
+  border: 1px solid var(--grey);
   border-radius: 0.5rem;
 }
-.section-newsletter .content-newsletter .form button {
-  padding: 1rem 2.875rem;
+.section-newsletter .content-newsletter .text-newsletter .form input::placeholder {
+  color: var(--dark-slate-grey);
+  opacity: 50%;
+}
+.section-newsletter .content-newsletter .text-newsletter .form .btn-subscribe {
+  background-color: var(--dark-slate-grey);
   border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  border: none;
+}
+.section-newsletter .content-newsletter .text-newsletter .form .btn-subscribe:hover {
+  background: linear-gradient(#ff6a3a, #ff527b);
+}
+
+@media (min-width: 48rem) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .section-newsletter {
+    max-width: 58rem;
+    border-radius: 2.25rem;
+  }
+  .section-newsletter .content-newsletter {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .section-newsletter .content-newsletter .images {
+    order: 2;
+  }
+  .section-newsletter .content-newsletter .text-newsletter {
+    padding: 0;
+    margin: auto 4rem auto 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */
